@@ -562,7 +562,7 @@
 
   function c() {
     var n = document.createElement("script");
-    n.src = "".concat("Build", "/").concat(w.a.metadata.loader_filename), w.a.dataUrl = "".concat("Build", "/").concat(w.a.metadata.data_filename), w.a.frameworkUrl = "".concat("Build", "/").concat(w.a.metadata.framework_filename), w.a.codeUrl = "".concat("Build", "/").concat(w.a.metadata.code_filename), w.a.streamingAssetsUrl = "StreamingAssets", n.addEventListener("load", function() {
+    n.src = "".concat("Build", "/").concat(w.a.metadata.loader_filename), w.a.dataUrl = "".concat("Build", "/").concat(w.a.metadata.data_filename), w.a.frameworkUrl = "".concat("Build", "/").concat(w.a.metadata.framework_filename), w.a.codeUrl = "".concat("Build", "/").concat(w.a.metadata.code_filename), w.a.streamingAssetsUrl = new URL("StreamingAssets", document.baseURI).href, /* ubg: resolve against <base> so the play shell loads bundles from the CDN */ n.addEventListener("load", function() {
       var n = document.querySelector("#game");
       createUnityInstance(n, w.a, a).then(function(n) {
         window.unityGame = n, r()
